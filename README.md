@@ -40,14 +40,23 @@ $ BasicAuthBruteForcer
 ```
 
 
-e.g.
+### Examples
+
+Brute force Digest Auth with custom timeout and 100 threads:
+:
 ```bash
-$ BasicAuthBruteForcer -url https://example.com/protected -user-file ./users.file -passwd 'Def@ultPassw0rd' -threads 100
+$ BasicAuthBruteForcer -url http://target -user-file users.txt -passwd-file passwords.txt -auth-type digest -timeout 30 -threads 100
+```
+
+Password spray:
+```bash
+$ BasicAuthBruteForcer -url https://target/protected -user-file users.txt -passwd 'Def@ultPassw0rd'
 ```
 
 📦 Default wordlists are included in the wordlists/ directory:
 * wordlists/users.txt
 * wordlists/passwords.txt
+
 Feel free to use your own!
 
 
